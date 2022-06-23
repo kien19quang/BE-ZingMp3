@@ -3,6 +3,7 @@ const route = require('./routes/web');
 const viewEngine = require('./config/viewEngine')
 const connectDB = require('./config/connectDB')
 const cors = require('cors')
+require('dotenv').config()
 
 const port = process.env.PORT || 3086;
 

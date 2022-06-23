@@ -1,16 +1,21 @@
-
+const HomeService = require('../services/HomeService')
 
 
 class HomeController {
 
 
-    home(req, res, next) {
-        res.send('Hello world')
-    }
-
-    // [GET] /crud
-    crud(req, res) {
-        res.render('crud.ejs')
+    homePage = async(req, res) => {
+        try {
+            let response = await HomeService.getHomePage(req.query.id)
+    
+            return res.status(200).json(response)
+        } catch (e) {
+            console.log(e);
+            return res.status(200).json({
+                errCode: -1,
+                errMessage: "Error from the server"
+            })
+        }
     }
 
 

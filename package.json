@@ -24,7 +24,8 @@
     "express": "^4.18.1",
     "lodash": "^4.17.21",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.0"
+    "sequelize": "^6.21.0",
+    "zingmp3-api-full": "^1.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
