@@ -14,8 +14,23 @@ let getChartHome = () => {
     })
 }
 
+let getNewReleaseChart = () => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let data = {}
+            data = await ZingMp3.getNewReleaseChart()
+
+            resolve(data)
+        } catch (e) {
+            reject(e)
+        }
+
+    })
+}
+
 
 
 module.exports = {
-    getChartHome
+    getChartHome,
+    getNewReleaseChart
 }
