@@ -3,6 +3,7 @@ const albumRouter = require('./album')
 const top100Router = require('./top100')
 const chartRouter = require('./chart')
 const artistRouter = require('./artist')
+const songRouter = require('./song')
 
 function route(app) {
 
@@ -11,6 +12,7 @@ function route(app) {
     app.use('/top100', top100Router)
     app.use('/zing-chart', chartRouter)
     app.use('/artist', artistRouter)
+    app.use('/song', songRouter)
     app.use('/', homeRouter);
 }
 
