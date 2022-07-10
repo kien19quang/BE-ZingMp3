@@ -25,8 +25,34 @@ let getSongById = (id) => {
     })
 }
 
+let getSongInfo = (id) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            if (!id) {
+                resolve({
+                    errCode: 1,
+                    errMessage: `Missing parameter`
+                })    
+            }
+            else {
+                let data = {}
+
+                data = await ZingMp3.getInfoSong(id)
+
+                resolve(data)
+            }
+
+
+        } catch (e) {
+            reject(e)
+        }
+
+    })
+}
+
 
 
 module.exports = {
-    getSongById
+    getSongById,
+    getSongInfo
 }
