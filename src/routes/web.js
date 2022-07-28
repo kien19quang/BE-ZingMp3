@@ -5,6 +5,8 @@ const chartRouter = require("./chart");
 const artistRouter = require("./artist");
 const songRouter = require("./song");
 const authRouter = require("./auth");
+const userRouter = require("./user");
+const playlistFavoriteRouter = require("./playlistFavorite");
 
 function route(app) {
   app.use("/album", albumRouter);
@@ -13,6 +15,8 @@ function route(app) {
   app.use("/artist", artistRouter);
   app.use("/song", songRouter);
   app.use("/auth", authRouter);
+  app.use("/user", userRouter);
+  app.use("/favorite", playlistFavoriteRouter);
   app.use("/", homeRouter);
 }
 
