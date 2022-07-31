@@ -6,6 +6,7 @@ const artistRouter = require("./artist");
 const songRouter = require("./song");
 const authRouter = require("./auth");
 const userRouter = require("./user");
+const searchRouter = require("./searchSong");
 const playlistFavoriteRouter = require("./playlistFavorite");
 
 function route(app) {
@@ -17,6 +18,7 @@ function route(app) {
   app.use("/auth", authRouter);
   app.use("/user", userRouter);
   app.use("/favorite", playlistFavoriteRouter);
+  app.use("/search", searchRouter);
   app.use("/", homeRouter);
 }
 
